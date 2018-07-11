@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Snake</title>
+        <link rel="stylesheet" href="snakeStyle.css" type="text/css">
+    </head>
+
+
+    <body>
+      <div>
+        <h3><a href="../home/index.html">Go Home</a><h3>
+      </div>
+      <div class="container">
+          <div id="overlay">
+              Your Final Score: <span id="final_score"></span>
+              <br>
+              <a onClick="window.location.reload()" href="#">Click to play again</a>
+          </div>
+          <canvas id="canvas" width="600" height="450">
+              Sorry, your broweser doesn't support this.
+          </canvas>
+          <div id="stats">
+              <div id="score"></div>
+          </div>
+      </div>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="snakeScript.js"></script>
+  </body>
+</html>

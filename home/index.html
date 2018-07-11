@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ayush Agarwal</title>
+        <link href="../css/main.css" rel="stylesheet" type="text/css">
+        <link href="style.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body id="main">
+        <div id="sidebar">
+            <div class="toggle-btn"  onclick="togglebtn(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <ul>
+                <li><a style="color: azure" href="index.html">HOME</a></li>
+                <li><a style="color: azure" href="../snake/snake.html">ABOUT</a></li>
+                <li><a style="color: azure" href="../projects/index.html">PROJECTS</a></li>
+                <li><a style="color: azure" href="../research/index.html">RESEARCH</a></li>
+                <li><a style="color: azure" href="../contact/index.html">CONTACT</a></li>
+            </ul>
+            <img class="picA" src="../other/Ayush.jpg" alt="Ayush Agarwal in Nice, France.">
+        </div>
+        <div id="header">
+            <div class="headerbar">
+                <h1>Ayush Agarwal</h1>
+            </div>
+        </div>
+
+
+        <div id="main-content">
+            <h2>Hi! My name is</h2>
+            <h2>Ayush Agarwal.</h2>
+            <p>I like to do math and programming</p>
+            <p>in my free time, but I also love</p>
+            <p>watching sport and playing</p>
+            <p>competitive golf!</p>
+        </div>
+        <div id="tour-website">
+            <p class="tour-website">Feel free to browse my website for some awesome content, and you may even find clues to a <a style ="color: black" href="../snake/snake.html">top secret page!</a></p>
+        </div>
+
+        <script>
+            function togglebtn(x) {
+                x.classList.toggle('change');
+                document.getElementById('sidebar').classList.toggle('active');
+            }
+        </script>
+    </body>
+</html>

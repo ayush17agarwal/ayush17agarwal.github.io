@@ -1,0 +1,40 @@
+#main-content {
+    display: block;
+    border-radius: 25px;
+    height: 260px;
+    width: 350px;
+    background: lightblue;
+    border: 1px solid black;
+    opacity: 80%;
+    position: absolute;
+    left: 40%;
+    top: 35%;
+}
+
+#main-content h2 {
+    margin-top: 7px;
+    text-align: center;
+    font-size: 33px;
+    color: crimson;
+    margin-bottom: 5px;
+}
+
+#main-content p {
+    font-family: cursive;
+    font-size: 20px;
+    text-align: center;
+    color: crimson;
+}
+
+
+#tour-website {
+    position: absolute;
+    font-size: 30px;
+    font-family: monospace;
+    bottom: 10%;
+    left: 20%;
+}
+
+#tour-website a {
+  text-decoration: none;
+}
