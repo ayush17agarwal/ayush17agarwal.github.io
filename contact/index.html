@@ -3,37 +3,35 @@
     <head>
         <title>Contact</title>
         <link href="../css/main.css" rel="stylesheet" type="text/css">
+        <link href="style.css" rel="stylesheet" type="text/css">
     </head>
 
     <body id="main">
-        <div id="sidebar">
-            <div class="toggle-btn"  onclick="togglebtn(this)">
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
-            </div>
-            <ul>
-                <li><a style="color: azure" href="../index.html">HOME</a></li>
-                <li><a style="color: azure" href="../about/index.html">ABOUT</a></li>
-                <li><a style="color: azure" href="../projects/index.html">PROJECTS</a></li>
-                <li><a style="color: azure" href="../research/index.html">RESEARCH</a></li>
-                <li><a style="color: azure" href="index.html">CONTACT</a></li>
-            </ul>
-            <img class="picA" src="../other/Ayush.jpg" alt="Ayush Agarwal in Nice, France.">
-        </div>
-        <div id="header">
-            <div class="headerbar">
-                <h1>Ayush Agarwal</h1>
-            </div>
-        </div>
+    <div id="nav-bar">
+      <ul>
+          <li><a style="color: azure" href="../index.html">HOME</a></li>
+          <li><a style="color: azure" href="../about/index.html">ABOUT</a></li>
+          <li><a style="color: azure" href="../projects/index.html">PROJECTS</a></li>
+          <li><a style="color: azure" href="../research/index.html">RESEARCH</a></li>
+          <li><a style= "color: azure" href="index.html">CONTACT</a></li>
+      </ul>
+    </div>
 
+    <div class="contact-title">
+      <h1>Looking for more?</h1>
+      <h2>Send me an email if you would like more information, <br>and I'll respond as soon as possible!</h2>
+    </div>
 
-        <script>
-            function togglebtn(x)
-            {
-                x.classList.toggle('change');
-                document.getElementById('sidebar').classList.toggle('active');
-            }
-        </script>
+    <div class="contact-form">
+      <form id="contact-form" method="post" action"contact-form.php">
+        <input name="name" type="text" class="form-control" placeholder="Your Name" required><br>
+
+        <input name="email" type="email" class="form-control" placeholder="Your Email" required><br>
+
+        <textarea name="message" class="form-control" placeholder="Message" rows="4" required></textarea><br>
+
+        <input type="submit" class="form-control submit" value="SUBMIT">
+      </form>
+    </div>
     </body>
 </html>

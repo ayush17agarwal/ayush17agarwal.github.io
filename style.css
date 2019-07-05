@@ -3,12 +3,11 @@
     border-radius: 25px;
     height: 260px;
     width: 350px;
-    background: lightblue;
-    border: 1px solid black;
+    background: antiquewhite;
     opacity: 80%;
     position: absolute;
     left: 40%;
-    top: 35%;
+    top: 20%;
 }
 
 #main-content h2 {
@@ -20,6 +19,7 @@
 }
 
 #main-content p {
+    margin-top: 10px;
     font-family: cursive;
     font-size: 20px;
     text-align: center;
@@ -31,10 +31,64 @@
     position: absolute;
     font-size: 30px;
     font-family: monospace;
-    bottom: 10%;
-    left: 20%;
+    text-align: center;
+    bottom: 40%;
+    left: 33%;
 }
 
 #tour-website a {
   text-decoration: none;
+}
+
+#homepage {
+  position: absolute;
+  margin-top: 50px;
+  height: 87%;
+  width: 100%;
+  background-color: #7cafb1;
+}
+
+#gallery-content {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+#home-image {
+  position: absolute;
+  object-fit: contain;
+  top: -10%;
+  left: 50%;
+  transform: translate(-50%);
+}
+#triangle {
+  position: absolute;
+	width: 0;
+	height: 0;
+	border-left: 40px solid transparent;
+	border-right: 40px solid transparent;
+	border-top: 40px solid #7cafb1;
+  top: 92%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.row {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 5px;
+  top: 97%;
+}
+
+.column {
+  flex: 20%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  width: 100%;
+  vertical-align: middle;
 }
