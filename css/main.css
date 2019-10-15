@@ -18,7 +18,7 @@
 #nav-bar ul {
     list-style-type: none;
     background-color: #5f9ea0;
-    position: fixed;
+    position: relative;
     width: 100%;
     text-align: center;
     z-index: 1;
