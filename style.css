@@ -37,56 +37,56 @@
 }
 
 #tour-website a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 #homepage {
-  position: absolute;
-  height: 87%;
-  width: 100%;
-  background-color: #7cafb1;
+    position: absolute;
+    height: 87%;
+    width: 100%;
+    background-color: #7cafb1;
 }
 
 #gallery-content {
-  position: absolute;
-  top: 90%;
-  left: 50%;
-  transform: translate(-50%);
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%);
 }
 
 #home-image {
-  position: absolute;
-  object-fit: contain;
-  left: 50%;
-  transform: translate(-50%);
+    position: absolute;
+    object-fit: contain;
+    left: 50%;
+    transform: translate(-50%);
 }
 #triangle {
-  position: absolute;
-	width: 0;
-	height: 0;
-	border-left: 40px solid transparent;
-	border-right: 40px solid transparent;
-	border-top: 40px solid #7cafb1;
-  top: 92%;
-  left: 50%;
-  transform: translate(-50%);
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-top: 40px solid #7cafb1;
+    top: 92%;
+    left: 50%;
+    transform: translate(-50%);
 }
 
 .row {
-  position: absolute;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 5px;
-  top: 97%;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 5px;
+    top: 97%;
 }
 
 .column {
-  flex: 20%;
-  padding: 0 4px;
+    flex: 20%;
+    padding: 0 4px;
 }
 
 .column img {
-  margin-top: 8px;
-  width: 100%;
-  vertical-align: middle;
+    margin-top: 8px;
+    width: 100%;
+    vertical-align: middle;
 }

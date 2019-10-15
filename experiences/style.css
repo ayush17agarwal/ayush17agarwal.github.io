@@ -1,6 +1,7 @@
 @font-face {
     font-family: Monaco;
-    src: url(../other/Monaco.ttf)
+    src: url(../other/Monaco.ttf);
+
 }
 
 * {
@@ -32,6 +33,7 @@
     text-align: center;
     font-size: 20px;
     text-wrap: normal;
+
 }
 
 p {

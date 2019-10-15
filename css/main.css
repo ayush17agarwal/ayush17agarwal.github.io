@@ -25,13 +25,13 @@
 }
 
 #nav-bar li {
-  display: inline-block;
-  color: white;
-  text-align: center;
-  padding: 15px 16px;
-  cursor: pointer;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 15px 16px;
+    cursor: pointer;
 }
 
 #nav-bar a {
-  text-decoration: none;
+    text-decoration: none;
 }
