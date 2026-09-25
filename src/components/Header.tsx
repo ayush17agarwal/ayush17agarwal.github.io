@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const links = [
   { href: "/", label: "Home" },
@@ -21,10 +22,20 @@ export default function Header() {
       <div className="mx-auto flex w-full max-w-3xl items-center justify-between px-6 py-4">
         <Link
           href="/"
-          className="font-mono text-sm font-medium tracking-tight text-foreground"
+          className="flex items-center gap-2.5"
           onClick={() => setOpen(false)}
         >
-          Ayush Agarwal
+          <span
+            className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg text-xs font-bold text-white"
+            style={{
+              background: "linear-gradient(135deg, var(--accent), var(--accent-2))",
+            }}
+          >
+            AA
+          </span>
+          <span className="font-mono text-sm font-medium tracking-tight text-foreground">
+            Ayush Agarwal
+          </span>
         </Link>
 
         <nav className="hidden gap-1 sm:flex">
@@ -37,9 +48,17 @@ export default function Header() {
                 href={link.href}
                 className={`rounded-full px-3 py-1.5 text-sm transition-colors ${
                   active
-                    ? "bg-foreground text-background"
+                    ? "text-white"
                     : "text-muted hover:text-foreground"
                 }`}
+                style={
+                  active
+                    ? {
+                        background:
+                          "linear-gradient(90deg, var(--accent), var(--accent-2))",
+                      }
+                    : undefined
+                }
               >
                 {link.label}
               </Link>
@@ -47,31 +66,34 @@ export default function Header() {
           })}
         </nav>
 
-        <button
-          type="button"
-          className="flex h-9 w-9 items-center justify-center rounded-full border border-border text-foreground sm:hidden"
-          aria-label="Toggle navigation menu"
-          aria-expanded={open}
-          onClick={() => setOpen((v) => !v)}
-        >
-          <span className="relative block h-3.5 w-4">
-            <span
-              className={`absolute left-0 top-0 h-px w-4 bg-current transition-transform ${
-                open ? "translate-y-[7px] rotate-45" : ""
-              }`}
-            />
-            <span
-              className={`absolute left-0 top-1/2 h-px w-4 -translate-y-1/2 bg-current transition-opacity ${
-                open ? "opacity-0" : "opacity-100"
-              }`}
-            />
-            <span
-              className={`absolute bottom-0 left-0 h-px w-4 bg-current transition-transform ${
-                open ? "-translate-y-[7px] -rotate-45" : ""
-              }`}
-            />
-          </span>
-        </button>
+        <div className="flex items-center gap-2">
+          <ThemeToggle />
+          <button
+            type="button"
+            className="flex h-9 w-9 items-center justify-center rounded-full border border-border text-foreground sm:hidden"
+            aria-label="Toggle navigation menu"
+            aria-expanded={open}
+            onClick={() => setOpen((v) => !v)}
+          >
+            <span className="relative block h-3.5 w-4">
+              <span
+                className={`absolute left-0 top-0 h-px w-4 bg-current transition-transform ${
+                  open ? "translate-y-[7px] rotate-45" : ""
+                }`}
+              />
+              <span
+                className={`absolute left-0 top-1/2 h-px w-4 -translate-y-1/2 bg-current transition-opacity ${
+                  open ? "opacity-0" : "opacity-100"
+                }`}
+              />
+              <span
+                className={`absolute bottom-0 left-0 h-px w-4 bg-current transition-transform ${
+                  open ? "-translate-y-[7px] -rotate-45" : ""
+                }`}
+              />
+            </span>
+          </button>
+        </div>
       </div>
 
       {open && (

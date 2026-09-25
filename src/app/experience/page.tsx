@@ -16,14 +16,21 @@ export default function ExperiencePage() {
         </p>
       </div>
 
-      <ol className="space-y-10">
+      <div className="relative">
+        <div
+          aria-hidden
+          className="absolute bottom-2 left-[22px] top-2 w-px bg-gradient-to-b from-accent/50 via-border to-transparent"
+        />
+        <ol className="space-y-10">
         {experience.map((entry) => (
-          <li key={entry.company + (entry.totalPeriod ?? entry.roles[0].period)}>
-            <div className="flex gap-4">
+          <li key={entry.company + (entry.totalPeriod ?? entry.roles[0].period)} className="group">
+            <div className="flex gap-4 transition-transform duration-200 group-hover:translate-x-1">
               <CompanyBadge name={entry.company} />
               <div className="min-w-0 flex-1 space-y-5">
                 <div>
-                  <p className="font-medium">{entry.company}</p>
+                  <p className="font-medium transition-colors group-hover:text-accent">
+                    {entry.company}
+                  </p>
                   <p className="text-sm text-muted">
                     {entry.totalPeriod ?? entry.roles[0].period}
                     {entry.location ? ` · ${entry.location}` : ""}
@@ -78,7 +85,8 @@ export default function ExperiencePage() {
             </div>
           </li>
         ))}
-      </ol>
+        </ol>
+      </div>
     </Container>
   );
 }

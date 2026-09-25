@@ -17,9 +17,11 @@ export default function ProjectsPage() {
       <ul className="grid gap-5 sm:grid-cols-2">
         {projects.map((project) => {
           const card = (
-            <div className="flex h-full flex-col gap-3 rounded-2xl border border-border bg-card p-6 transition-colors hover:border-accent/60">
+            <div className="group flex h-full flex-col gap-3 rounded-2xl border border-border bg-card p-6 transition-all duration-200 hover:-translate-y-1 hover:border-accent/60 hover:shadow-[0_12px_30px_-16px_var(--accent)]">
               <div className="flex items-baseline justify-between gap-4">
-                <h2 className="font-medium">{project.name}</h2>
+                <h2 className="font-medium transition-colors group-hover:text-accent">
+                  {project.name}
+                </h2>
                 <span className="shrink-0 font-mono text-xs text-muted">
                   {project.period}
                 </span>

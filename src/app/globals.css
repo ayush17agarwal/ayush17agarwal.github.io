@@ -7,6 +7,7 @@
   --card: #ffffff;
   --border: #e4e4e7;
   --accent: #0d9488;
+  --accent-2: #7c3aed;
   --accent-foreground: #f0fdfa;
 }
 
@@ -17,21 +18,34 @@
   --color-card: var(--card);
   --color-border: var(--border);
   --color-accent: var(--accent);
+  --color-accent-2: var(--accent-2);
   --color-accent-foreground: var(--accent-foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0c0c0d;
+  :root:not([data-theme="light"]) {
+    --background: #0a0a0b;
     --foreground: #f4f4f5;
     --muted: #a1a1aa;
     --card: #17171a;
     --border: #27272a;
     --accent: #2dd4bf;
+    --accent-2: #a78bfa;
     --accent-foreground: #042f2c;
   }
+}
+
+:root[data-theme="dark"] {
+  --background: #0a0a0b;
+  --foreground: #f4f4f5;
+  --muted: #a1a1aa;
+  --card: #17171a;
+  --border: #27272a;
+  --accent: #2dd4bf;
+  --accent-2: #a78bfa;
+  --accent-foreground: #042f2c;
 }
 
 * {
@@ -51,4 +65,53 @@ body {
 ::selection {
   background: var(--accent);
   color: var(--accent-foreground);
+}
+
+.bg-grid {
+  background-image: radial-gradient(circle, var(--border) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: linear-gradient(to bottom, black, transparent 85%);
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@keyframes blob-float {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(3%, -4%) scale(1.05);
+  }
+}
+
+.blob {
+  animation: blob-float 16s ease-in-out infinite;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.6s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blob,
+  .animate-fade-up {
+    animation: none;
+  }
 }
