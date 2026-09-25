@@ -1,14 +1,18 @@
 import Link from "next/link";
 import Container from "@/components/Container";
+import Avatar from "@/components/Avatar";
 import { profile } from "@/lib/content";
 
 export default function Home() {
   return (
     <Container className="flex min-h-[calc(100vh-73px)] flex-col justify-center gap-8 py-20">
       <div className="space-y-6">
+        <div className="animate-fade-up" style={{ animationDelay: "0ms" }}>
+          <Avatar size={88} />
+        </div>
         <p
           className="animate-fade-up font-mono text-sm text-accent"
-          style={{ animationDelay: "0ms" }}
+          style={{ animationDelay: "40ms" }}
         >
           Hi, I&apos;m
         </p>

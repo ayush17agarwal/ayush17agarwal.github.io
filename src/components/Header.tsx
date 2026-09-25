@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import ThemeToggle from "@/components/ThemeToggle";
+import Avatar from "@/components/Avatar";
 
 const links = [
   { href: "/", label: "Home" },
@@ -25,14 +26,7 @@ export default function Header() {
           className="flex items-center gap-2.5"
           onClick={() => setOpen(false)}
         >
-          <span
-            className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg text-xs font-bold text-white"
-            style={{
-              background: "linear-gradient(135deg, var(--accent), var(--accent-2))",
-            }}
-          >
-            AA
-          </span>
+          <Avatar size={28} ringWidth={2} />
           <span className="font-mono text-sm font-medium tracking-tight text-foreground">
             Ayush Agarwal
           </span>

@@ -14,7 +14,6 @@ export type ExperienceRole = {
   period: string;
   description?: string;
   bullets?: string[];
-  skills?: string[];
 };
 
 export type ExperienceEntry = {
@@ -47,16 +46,14 @@ export const experience: ExperienceEntry[] = [
       {
         title: "Software Development Engineer — HealthCare AI @ AWS HealthLake",
         period: "Sep 2024 – Jan 2026",
-        skills: ["Healthcare", "Engineering"],
       },
       {
         title: "Software Development Engineer — Amazon Software Builder Experience (ASBX)",
         period: "Aug 2023 – Sep 2024",
         bullets: [
-          "Engineered scalable CI/CD infrastructure for Native AWS (NAWS), supporting reliable deployments across Amazon's global infrastructure.",
-          "Delivered features extending CI/CD systems to 4 new AWS regions and across 3 different partition boundaries, expanding deployment reach at scale.",
+          "Engineered scalable CI/CD infrastructure in Java for Native AWS (NAWS), supporting reliable deployments across Amazon's global infrastructure.",
+          "Used AWS CloudFormation to extend CI/CD systems to 4 new AWS regions and across 3 different partition boundaries, expanding deployment reach at scale.",
         ],
-        skills: ["Java", "AWS CloudFormation"],
       },
     ],
   },
@@ -69,7 +66,6 @@ export const experience: ExperienceEntry[] = [
         period: "Aug 2021 – Dec 2022",
         description:
           "Taught ~25 freshmen in Computer Science across 2 semesters, covering opportunities within the university and careers in CS. Cultivated original lesson plans, fostered discussions about mental health, and talked through careers in software engineering.",
-        skills: ["Communication", "Leadership"],
       },
     ],
   },
@@ -81,8 +77,7 @@ export const experience: ExperienceEntry[] = [
         title: "Software Developer Intern",
         period: "May 2022 – Aug 2022",
         description:
-          "Worked on the Amazon HealthLake service with the Health AI team, building a new advanced search parameter for AWS HealthLake's FHIR API that helped thousands of customers get more out of HealthLake. Learned and used AWS services including S3, DynamoDB, SageMaker, and Coral.",
-        skills: ["Amazon Web Services (AWS)", "Java"],
+          "Worked on the Amazon HealthLake service with the Health AI team, building a new advanced search parameter in Java for AWS HealthLake's FHIR API that helped thousands of customers get more out of HealthLake. Learned and used AWS services including S3, DynamoDB, SageMaker, and Coral.",
       },
     ],
   },
@@ -92,7 +87,6 @@ export const experience: ExperienceEntry[] = [
       {
         title: "Software Engineering Intern",
         period: "May 2020 – Dec 2020",
-        skills: ["Programming"],
       },
     ],
   },
@@ -105,7 +99,6 @@ export const experience: ExperienceEntry[] = [
         period: "Aug 2017 – Jun 2019",
         description:
           "Researched the existence of Preons — hypothesized particles smaller than an electron or proton — with physicists at Fermilab and CERN. Created and analyzed Monte Carlo models using Bayesian and Frequentist methods, working in C++ with the ROOT data analysis framework.",
-        skills: ["Programming"],
       },
     ],
   },
@@ -118,7 +111,6 @@ export const experience: ExperienceEntry[] = [
         period: "Jun 2018 – Aug 2018",
         description:
           "Built SDKs in Java, Python, Ruby, and PHP for clients building eCommerce platforms, and documented starting guides for the team's GitHub Pages site.",
-        skills: ["Programming"],
       },
     ],
   },
@@ -187,29 +179,5 @@ export const projects: Project[] = [
       "A ground-up rebuild of this site — from a decade-old static HTML/CSS layout to a Next.js and TypeScript codebase, deployed on Vercel.",
     tags: ["Next.js", "TypeScript", "Tailwind CSS"],
     link: "https://github.com/ayush17agarwal/ayush17agarwal.github.io",
-  },
-];
-
-export type Volunteering = {
-  role: string;
-  org: string;
-  period: string;
-  description?: string;
-};
-
-export const volunteering: Volunteering[] = [
-  {
-    role: "Golf Coach",
-    org: "Pinecrest Golf Club",
-    period: "Jun 2020 – Aug 2021",
-    description:
-      "Coached children ages 4–17 in the PGA Jr. League, working on every part of the game from chipping and putting to approach shots.",
-  },
-  {
-    role: "Volunteer",
-    org: "Home of the Sparrow, Inc.",
-    period: "Jan 2019 – Aug 2019",
-    description:
-      "Sorted donated goods — clothes, toys, shoes, furniture — at a thrift store and donation center in Algonquin, IL.",
   },
 ];
